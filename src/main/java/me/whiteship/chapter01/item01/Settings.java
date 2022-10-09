@@ -16,6 +16,8 @@ public class Settings {
 
     private static final Settings SETTINGS = new Settings();
 
+    // 정적 팩터리 메서드는 상속을 제공하지않는다.
+    // 여기서만 인스턴스를 통제한다. 플라이웨이트 패턴은 필요한 값만 꺼내서 사용하는 패턴이다.
     public static Settings getInstance() {
         return SETTINGS;
     }

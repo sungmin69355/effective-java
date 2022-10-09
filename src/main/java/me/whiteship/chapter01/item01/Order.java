@@ -1,6 +1,7 @@
 package me.whiteship.chapter01.item01;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Order {
 
@@ -28,11 +29,7 @@ public class Order {
     }
 
     public static void main(String[] args) {
-
-        Order order = new Order();
-        if (order.orderStatus == OrderStatus.DELIVERED) {
-            System.out.println("delivered");
-        }
+        System.out.println(Arrays.stream(OrderStatus.values()).collect(Collectors.toList()));
     }
 
 }
